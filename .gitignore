@@ -1,0 +1,16 @@
+# Ignore system and local environment files
+database.db
+.env
+/vendor/
+/uploads/
+/.DS_Store
+Thumbs.db
+
+# Ignore XAMPP and IDE stuff
+xampp/
+.idea/
+.vscode/
+
+# Ignore cache
+*.log
+*.tmp

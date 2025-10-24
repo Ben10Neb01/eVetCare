@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a9d8f;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.top-nav .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 50px; /* 👈 space between links */
+}
+
+.top-nav li {
+  margin: 0; /* no double spacing */
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #ffeaa7;
+}
+
+footer {
+  background-color: #264653;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Mobile Navbar (Hamburger) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Hide menu on small screens */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-wrap: wrap;
+  }
+
+  .top-nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2a9d8f;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .top-nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.nav-links { display: none; }
+.nav-links.active { display: block; }
+
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay for readability */
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+section h2 {
+  font-weight: 700;
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+}
+
+<!--Form submission success page-->
+/* General message container */
+.message-box {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Success message */
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Error message */
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Warning message */
+.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Button section */
+.btn-links {
+  margin-top: 25px;
+}
+
+/* Buttons */
+.btn-links .btn {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-links .btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
