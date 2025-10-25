@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $user_id = $_SESSION['user_id'] ?? null;
 
 
-    // 🧾 Collect form data
+    // Collect form data
     $owner_name         = $_POST['owner_name']??'';
     $contact            = $_POST['contact'] ??'';
     $address            = $_POST['address'] ??'';
