@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// ✅ Clear all session data
+//  Clear all session data
 $_SESSION = [];
 
-// ✅ Destroy the session completely
+//  Destroy the session completely
 session_destroy();
 
-// ✅ Optional: clear cookies (in case “Remember me” or others used)
+//  Optional: clear cookies (in case “Remember me” or others used)
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(
@@ -21,7 +21,7 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-// ✅ Redirect user
+//  Redirect user
 header("Location: index.php?logged_out=1");
 exit();
 ?>
