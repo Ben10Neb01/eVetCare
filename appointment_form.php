@@ -118,7 +118,7 @@
     <div class="row g-3">
       <div class="col-md-6">
         <label for="appointment_date" class="form-label">Preferred Appointment Date:</label>
-        <input type="date" id="appointment_date" name="appointment_date" class="form-control" required min="<?= date('Y-m-d'); ?>">
+        <input type="date" id="appointment_date" name="appointment_date" class="form-control" required min="<?= date('Y-m-d'); ?>" value="regular">
       </div>
 
       <div class="col-12">

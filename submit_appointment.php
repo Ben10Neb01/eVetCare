@@ -7,19 +7,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // 🧾 Collect form data
-    $owner_name         = $_POST['owner_name'];
-    $contact            = $_POST['contact'];
-    $address            = $_POST['address'];
-    $pet_name           = $_POST['pet_name'];
-    $species            = $_POST['species'];
-    $breed              = $_POST['breed'];
-    $age                = $_POST['age'];
-    $sex                = $_POST['sex'];
-    $symptom_duration   = $_POST['symptom_duration'];
-    $symptoms           = $_POST['symptoms'];
-    $previous_treatment = $_POST['previous_treatment'];
-    $appointment_date   = $_POST['appointment_date'];
-    $remarks            = $_POST['remarks'];
+    $owner_name         = $_POST['owner_name']??'';
+    $contact            = $_POST['contact'] ??'';
+    $address            = $_POST['address'] ??'';
+    $pet_name           = $_POST['pet_name'] ??'';
+    $species            = $_POST['species'] ??'';
+    $breed              = $_POST['breed']??'';
+    $age                = $_POST['age']??'';
+    $sex                = $_POST['sex']??'';
+    $symptom_duration   = $_POST['symptom_duration']??'';
+    $symptoms           = $_POST['symptoms']??'';
+    $previous_treatment = $_POST['previous_treatment'] ??'';
+    $appointment_date = !empty($_POST['appointment_date']) ? $_POST['appointment_date'] : NULL;
+    $remarks            = $_POST['remarks'] ??'';
     $email              = ""; // optional field for later use
 
     // 🐾 Optional file upload handling
